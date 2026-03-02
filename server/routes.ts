@@ -25,5 +25,21 @@ export async function registerRoutes(
     }
   });
 
+  app.post(api.leads.create.path, async (req, res) => {
+    try {
+      const input = api.leads.create.input.parse(req.body);
+      const lead = await storage.createLead(input);
+      res.status(201).json(lead);
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        return res.status(400).json({
+          message: err.errors[0].message,
+          field: err.errors[0].path.join('.'),
+        });
+      }
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
   return httpServer;
 }

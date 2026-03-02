@@ -26,6 +26,17 @@ export const api = {
       },
     },
   },
+  leads: {
+    create: {
+      method: 'POST' as const,
+      path: '/api/leads' as const,
+      input: insertLeadSchema,
+      responses: {
+        201: z.custom<typeof leads.$inferSelect>(),
+        400: errorSchemas.validation,
+      },
+    },
+  },
 };
 
 export function buildUrl(path: string, params?: Record<string, string | number>): string {
