@@ -1,0 +1,36 @@
+Actúa como un desarrollador web experto en marketing. Crea una landing page moderna, profesional y orientada a la conversión para 'Arena Financial Center' en Houston, Texas.
+
+1. Estilo y Diseño:
+
+Paleta de colores: Usa blanco y verde (usa tonos verdes inspirados en el logo que te proporcioné para transmitir confianza y crecimiento).
+
+Diseño: Limpio, minimalista y mobile-responsive.
+
+Tipografía: Moderna y profesional (tipo sans-serif).
+
+2. Contenido (en Español):
+
+Hero Section: Título: 'Tu Futuro Financiero Comienza en Houston'. Subtítulo: 'Únete al movimiento global: más de 30 millones de familias formadas con educación financiera gratuita. Sé parte del cambio en Arena Financial Center'.
+
+Call to Action (CTA): Un botón prominente que diga 'Únete a nuestro grupo de WhatsApp' con el link: https://chat.whatsapp.com/KhmKovSpV9uL2q8v7R82yf?mode=hqctcli
+
+Sobre nosotros: Menciona que somos parte de la misión de World System Builder y la National Financial Literacy Campaign.
+
+Ubicación: 'Arena Financial Center, 7324 Southwest Fwy Ste. 702, Houston, TX 77074'.
+
+Social Proof: Añade una sección que destaque 'Educación Financiera Gratuita' y 'Construcción de Riqueza'.
+
+3. Requerimientos técnicos:
+
+Estructura HTML5 y CSS3 usando flexbox o grid para asegurar que se vea bien en móviles.
+
+El botón de WhatsApp debe ser llamativo y estar fijado o muy visible.
+
+Incluye un espacio donde pueda subir fácilmente mi logo (Arena Financial Center)."
+
+Consejos adicionales para tu landing page:
+Optimización: Asegúrate de que el botón de WhatsApp sea el elemento más visible de toda la pantalla (el llamado "above the fold").
+
+Confianza: Dado que estás en el sector financiero, asegúrate de que el diseño se vea impecable. La gente necesita confiar en quién maneja su información.
+
+Cumplimiento: Recuerda que al trabajar bajo la sombrilla de WFG/WSB, es importante verificar si hay lineamientos de marca o avisos legales específicos que debas incluir en el pie de página (footer) de tu sitio web para mantener el cumplimiento normativo.
