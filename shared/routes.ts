@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { insertContactMessageSchema, contactMessages } from './schema';
+import { insertContactMessageSchema, contactMessages, insertLeadSchema, leads } from './schema';
 
 export const errorSchemas = {
   validation: z.object({
