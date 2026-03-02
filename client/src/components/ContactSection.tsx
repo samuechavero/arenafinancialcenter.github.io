@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { api, type ContactMessageInput } from "@shared/routes";
-import { useCreateContactMessage } from "@/hooks/use-contact";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,11 +14,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 export function ContactSection() {
-  const mutation = useCreateContactMessage();
-  
   const form = useForm<ContactMessageInput>({
     resolver: zodResolver(api.contactMessages.create.input),
     defaultValues: {
@@ -31,9 +28,10 @@ export function ContactSection() {
   });
 
   const onSubmit = (data: ContactMessageInput) => {
-    mutation.mutate(data, {
-      onSuccess: () => form.reset()
-    });
+    const text = `Hola, mi nombre es ${data.name}. \n${data.phone ? `Mi teléfono es ${data.phone}.\n` : ''}Mensaje: ${data.message}`;
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/18328901102?text=${encodedText}`, '_blank');
+    form.reset();
   };
 
   return (
@@ -79,16 +77,6 @@ export function ContactSection() {
                   <p className="text-muted-foreground mt-1">Llámanos para agendar tu cita.</p>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg">Correo Electrónico</h4>
-                  <p className="text-muted-foreground mt-1">Escríbenos para cualquier consulta.</p>
-                </div>
-              </div>
             </div>
           </motion.div>
 
@@ -121,26 +109,12 @@ export function ContactSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-slate-700">Correo Electrónico</FormLabel>
-                        <FormControl>
-                          <Input type="email" placeholder="correo@ejemplo.com" className="bg-white border-slate-200 focus-visible:ring-primary h-12" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
                     name="phone"
                     render={({ field }) => (
-                      <FormItem>
+                      <FormItem className="col-span-2">
                         <FormLabel className="text-slate-700">Teléfono (opcional)</FormLabel>
                         <FormControl>
-                          <Input type="tel" placeholder="(555) 123-4567" className="bg-white border-slate-200 focus-visible:ring-primary h-12" {...field} />
+                          <Input type="tel" placeholder="(555) 123-4567" className="bg-white border-slate-200 focus-visible:ring-primary h-12" {...field} value={field.value ?? ""} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -169,16 +143,34 @@ export function ContactSection() {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  disabled={mutation.isPending}
-                  className="w-full h-14 text-lg rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                  className="w-full h-14 text-lg rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-white font-bold bg-[#25D366] hover:bg-[#128C7E]"
                 >
-                  {mutation.isPending ? "Enviando..." : "Enviar Mensaje"}
+                  Enviar por WhatsApp
                 </Button>
               </form>
             </Form>
           </motion.div>
 
         </div>
+
+        {/* Google Maps Embed */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-20 rounded-3xl overflow-hidden shadow-xl border border-slate-100 h-[450px]"
+        >
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.6187188306517!2d-95.52075682477637!3d29.70183207509789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3004fae002d%3A0xb0ef4c4af376e2de!2sArena%20Financial%20Center!5e0!3m2!1ses!2sus!4v1772493043947!5m2!1ses!2sus" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={false} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </motion.div>
       </div>
     </section>
   );

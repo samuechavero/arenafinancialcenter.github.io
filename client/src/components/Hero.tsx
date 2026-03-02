@@ -13,9 +13,9 @@ export function Hero() {
         <div className="absolute inset-0 bg-slate-900/70 mix-blend-multiply z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-20" />
         {/* landing page hero houston skyline modern abstract architecture */}
-        <img 
-          src="https://pixabay.com/get/g6f831472d6137935f5ab13ea0745f1fdde49ddbd2e8ecbf1f9fabde9d96816a3ffbaa28e87ed3c6d53887048021ee20f3ac65ec316fcacbf403ffaca22ee00ed_1280.jpg" 
-          alt="Houston Skyline Architecture" 
+        <img
+          src="https://pixabay.com/get/g6f831472d6137935f5ab13ea0745f1fdde49ddbd2e8ecbf1f9fabde9d96816a3ffbaa28e87ed3c6d53887048021ee20f3ac65ec316fcacbf403ffaca22ee00ed_1280.jpg"
+          alt="Houston Skyline Architecture"
           className="w-full h-full object-cover"
         />
       </div>
@@ -30,22 +30,24 @@ export function Hero() {
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-primary-foreground font-medium text-sm mb-4">
             Educación Financiera en Houston, TX
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight leading-tight">
-            Tu Futuro Financiero <br/>
+            Tu Futuro Financiero <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-primary">
               Comienza en Houston
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-2xl text-slate-200 leading-relaxed max-w-3xl mx-auto">
             Únete al movimiento global: más de 30 millones de familias formadas con educación financiera gratuita. Sé parte del cambio en <span className="text-white font-semibold">Arena Financial Center</span>.
           </p>
-          
+          <p className="text-lg md:text-2xl text-slate-200 leading-relaxed max-w-3xl mx-auto">
+            Ven a nuestra proxima capacitacion esta semana. <span className="text-white font-semibold">mas informacion en Whatsapp</span>.
+          </p>
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button 
-              size="lg" 
-              asChild 
+            <Button
+              size="lg"
+              asChild
               className="bg-[#25D366] hover:bg-[#20bd5c] text-white text-lg h-16 px-8 rounded-2xl shadow-[0_8px_30px_rgba(37,211,102,0.3)] hover:shadow-[0_12px_40px_rgba(37,211,102,0.4)] hover:-translate-y-1 transition-all border-none w-full sm:w-auto"
             >
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
@@ -53,11 +55,11 @@ export function Hero() {
                 Únete a nuestro grupo de WhatsApp
               </a>
             </Button>
-            
-            <Button 
-              size="lg" 
+
+            <Button
+              size="lg"
               variant="outline"
-              asChild 
+              asChild
               className="h-16 px-8 rounded-2xl border-2 border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 text-white text-lg transition-all w-full sm:w-auto"
             >
               <a href="#about">

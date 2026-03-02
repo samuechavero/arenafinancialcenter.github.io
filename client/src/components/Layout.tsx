@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
-import logoImg from "@assets/Arena_Financial_Center_1772475413908.png";
+import logoImg from "../../public/assets/logo.png";
 import wsbLogoImg from "@assets/WSB_professional_1772475416019.png";
 
 const WHATSAPP_LINK = "https://chat.whatsapp.com/KhmKovSpV9uL2q8v7R82yf?mode=hqctcli";
@@ -21,18 +21,17 @@ function Navbar() {
   }, []);
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b" : "bg-transparent"
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <img src={logoImg} alt="Arena Financial Center Logo" className="h-12 w-auto" />
+            <img src={logoImg} alt="Arena Financial Center Logo" className="h-14 w-auto rounded-full shadow-sm" />
             <span className={`font-display font-bold text-xl hidden sm:block ${isScrolled ? "text-primary" : "text-white drop-shadow-md"}`}>
-              Arena Financial
+              Arena Financial Center
             </span>
           </Link>
 
@@ -57,7 +56,7 @@ function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center">
-            <button 
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`p-2 rounded-md ${isScrolled ? "text-foreground" : "text-white"}`}
             >
@@ -100,7 +99,7 @@ function Footer() {
     <footer className="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
-          
+
           <div className="space-y-4">
             <img src={logoImg} alt="Arena Financial Center Logo" className="h-16 w-auto brightness-0 invert opacity-90" />
             <p className="text-sm leading-relaxed max-w-sm">
