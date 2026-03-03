@@ -8,7 +8,7 @@ import Home from "@/pages/Home";
 
 function Router() {
   return (
-    <WouterRouter base="/">
+    <WouterRouter base="/arenafinancialcenter.github.io">
       <Switch>
         <Route path="/" component={Home} />
         {/* Fallback to 404 */}
