@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
 import { ChevronDown } from "lucide-react";
+import houstonSkyline from "../assets/houston-skyline-custom.jpg";
 
 export function Hero() {
   const WHATSAPP_LINK = "https://chat.whatsapp.com/KhmKovSpV9uL2q8v7R82yf?mode=hqctcli";
@@ -14,8 +15,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-20" />
         {/* landing page hero houston skyline modern abstract architecture */}
         <img
-          src="https://pixabay.com/get/g6f831472d6137935f5ab13ea0745f1fdde49ddbd2e8ecbf1f9fabde9d96816a3ffbaa28e87ed3c6d53887048021ee20f3ac65ec316fcacbf403ffaca22ee00ed_1280.jpg"
-          alt="Houston Skyline Architecture"
+          src={houstonSkyline}
+          alt="Houston Skyline"
           className="w-full h-full object-cover"
         />
       </div>
