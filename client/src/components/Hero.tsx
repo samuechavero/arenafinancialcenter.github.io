@@ -38,21 +38,21 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-2xl text-slate-200 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed max-w-3xl mx-auto text-balance">
             Únete al movimiento global: más de 30 millones de familias formadas con educación financiera gratuita. Sé parte del cambio en <span className="text-white font-semibold">Arena Financial Center</span>.
           </p>
-          <p className="text-lg md:text-2xl text-slate-200 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed max-w-3xl mx-auto text-balance">
             Ven a nuestra proxima capacitacion esta semana. <span className="text-white font-semibold">mas informacion en Whatsapp</span>.
           </p>
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
             <Button
               size="lg"
               asChild
-              className="bg-[#25D366] hover:bg-[#20bd5c] text-white text-lg h-16 px-8 rounded-2xl shadow-[0_8px_30px_rgba(37,211,102,0.3)] hover:shadow-[0_12px_40px_rgba(37,211,102,0.4)] hover:-translate-y-1 transition-all border-none w-full sm:w-auto"
+              className="bg-[#25D366] hover:bg-[#20bd5c] text-white text-base sm:text-lg h-auto py-4 px-6 sm:px-8 rounded-2xl shadow-[0_8px_30px_rgba(37,211,102,0.3)] hover:shadow-[0_12px_40px_rgba(37,211,102,0.4)] hover:-translate-y-1 transition-all border-none w-full sm:w-auto"
             >
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp className="w-6 h-6 mr-3" />
-                Únete a nuestro grupo de WhatsApp
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-center whitespace-normal">
+                <FaWhatsapp className="w-6 h-6 mr-2 shrink-0" />
+                <span>Únete a nuestro grupo de WhatsApp</span>
               </a>
             </Button>
 
@@ -60,9 +60,9 @@ export function Hero() {
               size="lg"
               variant="outline"
               asChild
-              className="h-16 px-8 rounded-2xl border-2 border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 text-white text-lg transition-all w-full sm:w-auto"
+              className="h-auto py-4 px-6 sm:px-8 rounded-2xl border-2 border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 text-white text-base sm:text-lg transition-all w-full sm:w-auto"
             >
-              <a href="#about">
+              <a href="#about" className="flex items-center justify-center text-center">
                 Conocer más
               </a>
             </Button>
